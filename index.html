@@ -1,509 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>c:\Users\vvikr\OneDrive\Documents\index.html
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stuti | Student Portfolio & Aspiring AR/VR Designer</title>
-    <meta name="
-    "
-        content="Explore the student portfolio of Stuti, a 9th-grade student at National Public School ITPL, Bengaluru. Discover her talents in art & sports, her dream college (Royal College of Art), and her ambition to become an AR/VR Designer.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main Stylesheet -->
+    <title>FarmSphere - Smart Grow Monitor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dark-theme">
-    <!-- Background Glow Elements -->
-    <div class="blob-glow blob-1" aria-hidden="true"></div>
-    <div class="blob-glow blob-2" aria-hidden="true"></div>
-    <div class="blob-glow blob-3" aria-hidden="true"></div>
+<body>
 
-    <!-- Header Navigation -->
-    <header id="main-header" class="glass-nav">
-        <div class="header-container">
-            <a href="#hero" class="logo">
-                <span class="logo-accent">&lt;</span>Stuti<span class="logo-accent">/&gt;</span>
-            </a>
-            <nav id="navbar">
-                <ul class="nav-links">
-                    <li><a href="#hero" class="nav-link active">Profile</a></li>
-                    <li><a href="#talents" class="nav-link">Talents & Skills</a></li>
-                    <li><a href="#dream-college" class="nav-link">Dream College</a></li>
-                    <li><a href="#ambition" class="nav-link">Ambition</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+    <div id="particle-container"></div>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">🌿</span>
+                <div>
+                    <h2>FarmSphere</h2>
+                    <p>Smart Grow Monitor</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-target="dashboard">📋 Dashboard</button>
+                <button class="nav-btn" data-target="crops">🌱 Crops</button>
+                <button class="nav-btn" data-target="analytics">📊 Analytics</button>
+                <button class="nav-btn" data-target="alerts">🔔 Alerts</button>
+                <button class="nav-btn" data-target="settings">⚙️ Settings</button>
             </nav>
-            <div class="header-actions">
-                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" class="theme-btn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Open navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="system-status-widget">
+                <p>System Status</p>
+                <h3 class="status-healthy">Healthy</h3>
+                <span class="subtext">All systems operational</span>
             </div>
-        </div>
-    </header>
+        </aside>
 
-    <main>
-        <!-- SECTION 1: School & Profile -->
-        <section id="hero" class="section-container hero-section">
-            <div class="hero-content">
-                <div class="badge-container">
-                    <span class="badge badge-accent">9th Grade Student</span>
-                    <span class="badge badge-primary">National Public School ITPL</span>
-                </div>
-                <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Stuti</span>
-                </h1>
-                <p class="hero-subtitle">
-                    A curious creative thinker and honor student at <strong>National Public School ITPL,
-                        Bengaluru</strong>.
-                    I bridge the gap between physical fine arts and future digital interfaces, with a deep passion for
-                    designing immersive virtual worlds.
-                </p>
-                <div class="hero-meta">
-                    <div class="meta-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Bengaluru, India</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>Class of 2029</span>
-                    </div>
-                </div>
-                <div class="hero-ctas">
-                    <a href="#ambition" class="btn btn-primary">
-                        <span>Explore My Ambition</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="#talents" class="btn btn-outline">View My Talents</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="image-border-glow">
-                    <img src="assets/profile.png" alt="Stuti - 9th Grade Student and Aspiring AR/VR Designer"
-                        class="profile-img" id="profile-avatar">
-                </div>
-            </div>
-        </section>
+        <main class="main-content">
 
-        <!-- SECTION 2: Talents & Skills -->
-        <section id="talents" class="section-container py-large">
-            <div class="section-header text-center">
-                <span class="section-tag">Creativity & Athletics</span>
-                <h2 class="section-title">Talents & Skills</h2>
-                <p class="section-subtitle">A balanced pursuit of artistic expression and physical discipline.</p>
-            </div>
-
-            <!-- Drawing & Painting Spotlight -->
-            <div class="talent-spotlight glass-card">
-                <div class="spotlight-image">
-                    <img src="assets/artwork.png" alt="Sunset Lake landscape painting by Stuti" class="artwork-preview">
-                    <div class="artwork-overlay">
-                        <span>Featured Painting: "Serenade of the Skies"</span>
-                    </div>
+            <header class="main-header">
+                <div class="user-profile">
+                    <h1>👋 Namaste, Stuti! 🌿</h1>
+                    <p>Your farm is healthy and growing great today!</p>
                 </div>
-                <div class="spotlight-info">
-                    <div class="talent-tag"><i class="fa-solid fa-palette"></i> Drawing & Painting</div>
-                    <h3>Exploring Visual Storytelling</h3>
-                    <p>
-                        For as long as I can remember, I have used canvas and sketchbooks to make my thoughts visible.
-                        I experiment with impressionistic landscapes using acrylics, fine-line detailing in pen and ink,
-                        and digital illustrations.
-                        This hand-drawn foundation feeds directly into my spatial layouts and visual balance when
-                        designing AR/VR interfaces.
-                    </p>
-                    <div class="artwork-attributes">
-                        <span class="attr-pill"><i class="fa-solid fa-brush"></i> Acrylic & Canvas</span>
-                        <span class="attr-pill"><i class="fa-solid fa-laptop-code"></i> Digital Illustration</span>
-                        <span class="attr-pill"><i class="fa-solid fa-eye"></i> Spatial Composition</span>
-                    </div>
+                <div class="weather-clock-widget">
+                    <div class="weather-pill">🌤️ 28°C <span class="subtext">Sunny</span></div>
+                    <div class="date-pill">📅 May 28, 2026 <span class="subtext">Wednesday</span></div>
                 </div>
-            </div>
+            </header>
 
-            <!-- Sports & Athletic Skills -->
-            <div class="sports-grid mt-medium">
-                <!-- Swimming -->
-                <div class="sport-card glass-card hover-glow" id="sport-swimming">
-                    <div class="sport-header">
-                        <div class="sport-icon icon-swim">
-                            <i class="fa-solid fa-person-swimming"></i>
+            <section id="panel-dashboard" class="content-panel active">
+
+                <div class="metrics-grid">
+                    <div class="metric-card cyan-glow">
+                        <span class="card-icon">🧪</span>
+                        <div class="card-meta">
+                            <p>pH Level</p>
+                            <h2>6.2</h2>
+                            <span class="range-info">Optimal (5.5 - 6.5)</span>
                         </div>
-                        <h4>Swimming</h4>
                     </div>
-                    <p class="sport-description">
-                        Building stamina and mental focus in the water. Training in freestyle and backstroke races has
-                        taught me endurance and the value of split-second precision.
-                    </p>
-                    <div class="sport-stats">
-                        <div class="stat-bar">
-                            <span class="stat-label">Endurance</span>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 85%;"></div>
-                            </div>
+                    <div class="metric-card teal-glow">
+                        <span class="card-icon">🌡️</span>
+                        <div class="card-meta">
+                            <p>Water Temp</p>
+                            <h2>24.3 °C</h2>
+                            <span class="range-info">Optimal (20 - 26°C)</span>
                         </div>
-                        <div class="stat-bar">
-                            <span class="stat-label">Technique</span>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 80%;"></div>
-                            </div>
+                    </div>
+                    <div class="metric-card purple-glow">
+                        <span class="card-icon">💧</span>
+                        <div class="card-meta">
+                            <p>Humidity</p>
+                            <h2>68 %</h2>
+                            <span class="range-info">Optimal (60 - 80%)</span>
+                        </div>
+                    </div>
+                    <div class="metric-card green-glow">
+                        <span class="card-icon">🔋</span>
+                        <div class="card-meta">
+                            <p>Nutrients</p>
+                            <h2>92 %</h2>
+                            <span class="range-info">Status: Optimal</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Basketball -->
-                <div class="sport-card glass-card hover-glow" id="sport-basketball">
-                    <div class="sport-header">
-                        <div class="sport-icon icon-basketball">
-                            <i class="fa-solid fa-basketball"></i>
-                        </div>
-                        <h4>Basketball</h4>
-                    </div>
-                    <p class="sport-description">
-                        Active player on the school court. Basketball is where I practice quick decision-making, fast
-                        spatial coordination, and cohesive team communication under pressure.
-                    </p>
-                    <div class="sport-stats">
-                        <div class="stat-bar">
-                            <span class="stat-label">Teamwork</span>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        <div class="stat-bar">
-                            <span class="stat-label">Tactics</span>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 75%;"></div>
-                            </div>
+                <div class="dashboard-mid-row">
+                    <div class="data-block growth-overview">
+                        <h3>Growth Overview <span class="subtext">(Last 7 Days)</span></h3>
+                        <div class="mock-chart">
+                            <div class="chart-line"></div>
+                            <span class="chart-badge">85%</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Badminton -->
-                <div class="sport-card glass-card hover-glow" id="sport-badminton">
-                    <div class="sport-header">
-                        <div class="sport-icon icon-badminton">
-                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                    <div class="hydro-rack-visualizer">
+                        <div class="rack-light-bar"></div>
+                        <div class="rack-shelf">
+                            <div class="plant-spot growing">🌱</div>
+                            <div class="plant-spot growing">🌱</div>
+                            <div class="plant-spot growing">🌱</div>
                         </div>
-                        <h4>Badminton</h4>
-                    </div>
-                    <p class="sport-description">
-                        Fast-paced rallies that sharpen my reflexes and hand-eye coordination. A game of speed,
-                        strategy, and agility that keeps me dynamic and energetic.
-                    </p>
-                    <div class="sport-stats">
-                        <div class="stat-bar">
-                            <span class="stat-label">Reflexes</span>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="stat-bar">
-                            <span class="stat-label">Agility</span>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 85%;"></div>
-                            </div>
+                        <div class="rack-shelf">
+                            <div class="plant-spot growing">🌱</div>
+                            <div class="plant-spot growing">🌱</div>
+                            <div class="plant-spot growing">🌱</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- SECTION 3: Dream College -->
-        <section id="dream-college" class="section-container py-large bg-alt">
-            <div class="section-header text-center">
-                <span class="section-tag">Aspirational Horizon</span>
-                <h2 class="section-title">Dream College</h2>
-                <p class="section-subtitle">Where design meets technology on a global stage.</p>
-            </div>
-
-            <div class="college-showcase">
-                <div class="college-details-card glass-card">
-                    <div class="college-header">
-                        <div class="rca-logo-placeholder">RCA</div>
-                        <div>
-                            <h3>Royal College of Art</h3>
-                            <p class="college-location"><i class="fa-solid fa-map-pin"></i> London, United Kingdom</p>
-                        </div>
-                    </div>
-                    <p class="college-intro">
-                        The <strong>Royal College of Art (RCA)</strong> is consistently ranked as the world’s number one
-                        art and design university.
-                        It represents the absolute pinnacle of creative experimentation, making it my ultimate academic
-                        destination.
-                    </p>
-                    <div class="college-program bg-glass-dark">
-                        <h4 class="program-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Target Program:
-                            Information Experience Design (MA)</h4>
-                        <p>
-                            A program that merges post-digital art, experimental design, and human-computer
-                            interactions.
-                            It is the perfect training ground to develop critical, artistic, and immersive experiences
-                            in mixed reality environments.
-                        </p>
-                    </div>
-                    <div class="college-highlights">
-                        <div class="highlight-item">
-                            <span class="hl-number">#1</span>
-                            <span class="hl-text">QS Art & Design University globally</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="hl-number">Labs</span>
-                            <span class="hl-text">State-of-the-art VR and spatial labs</span>
-                        </div>
+                    <div class="data-block smart-alerts">
+                        <h3>Smart Alerts</h3>
+                        <ul class="alert-list">
+                            <li class="alert-item success">🟢 System Healthy <span class="time">11:20 AM</span></li>
+                            <li class="alert-item warning">🟡 Water level low <span class="time">10:15 AM</span></li>
+                            <li class="alert-item info">🔵 Nutrient mix refreshed <span class="time">Yesterday</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="college-why-card glass-card">
-                    <h3>Why the Royal College of Art?</h3>
-                    <ul class="why-list">
-                        <li>
-                            <div class="why-icon"><i class="fa-solid fa-microchip"></i></div>
-                            <div class="why-content">
-                                <strong>Intersection of Disciplines:</strong> RCA blends tech and art, encouraging
-                                students to view code and spatial interfaces as creative mediums.
+                <div class="dashboard-bottom-row">
+                    <div class="crop-progress-card">
+                        <h3>Crop Progress</h3>
+                        <div class="crop-bar-grid">
+                            <div class="crop-progress-item">
+                                <span class="crop-icon">🥬</span>
+                                <p>Lettuce</p>
+                                <div class="progress-ring-mock" style="--progress-color: var(--neon-green)">82%</div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="why-icon"><i class="fa-solid fa-people-group"></i></div>
-                            <div class="why-content">
-                                <strong>Global Creative Network:</strong> Collaboration with pioneers, international
-                                studios, and designers from over 75 countries.
+                            <div class="crop-progress-item">
+                                <span class="crop-icon">🌿</span>
+                                <p>Basil</p>
+                                <div class="progress-ring-mock" style="--progress-color: var(--neon-green)">91%</div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="why-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                            <div class="why-content">
-                                <strong>Focus on Social Impact:</strong> Using design to tackle real-world challenges,
-                                from accessibility to climate science.
+                            <div class="crop-progress-item">
+                                <span class="crop-icon">🥦</span>
+                                <p>Kale</p>
+                                <div class="progress-ring-mock" style="--progress-color: var(--neon-teal)">75%</div>
                             </div>
-                        </li>
-                    </ul>
-                    <div class="college-roadmap">
-                        <h4>My Roadmap to RCA:</h4>
-                        <div class="roadmap-steps">
-                            <div class="step active">
-                                <span class="step-num">9th</span>
-                                <span class="step-label">Academics & Fine Art Skills</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">11th</span>
-                                <span class="step-label">3D Modelling & UX Prototypes</span>
-                            </div>
-                            <div class="step">
-                                <span class="step-num">BFA/BDes</span>
-                                <span class="step-label">Creative Interaction Design Portfolio</span>
+                            <div class="crop-progress-item">
+                                <span class="crop-icon">🌱</span>
+                                <p>Spinach</p>
+                                <div class="progress-ring-mock" style="--progress-color: var(--neon-purple)">38%</div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="water-usage-card">
+                        <h3>Water Usage</h3>
+                        <h2>120 L <span class="subtext">Today</span></h2>
+                        <p class="trend-up">This Week: 840 L (+12%)</p>
+                    </div>
+
+                    <div class="system-health-card">
+                        <h3>System Health</h3>
+                        <div class="radial-health-score">98% <span class="subtext">Excellent</span></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECTION 4: Ambition (AR/VR Designer) -->
-        <section id="ambition" class="section-container py-large">
-            <div class="section-header text-center">
-                <span class="section-tag">Future Vision</span>
-                <h2 class="section-title">Ambition: AR/VR Designer</h2>
-                <p class="section-subtitle">Designing portals that bring digital stories into physical dimensions.</p>
-            </div>
+            <section id="panel-crops" class="content-panel">
+                <h2>Crop Matrix Field Analysis</h2>
+                <p>Interactive data management views loading...</p>
+            </section>
 
-            <div class="ambition-grid">
-                <!-- AR/VR Concept Showcase -->
-                <div class="ambition-info glass-card">
-                    <h3>Transforming How We Experience the World</h3>
-                    <p>
-                        As an **AR/VR (Augmented Reality / Virtual Reality) Designer**, my ambition is to build spatial
-                        interfaces that feel organic and human-centered.
-                        I believe that technology shouldn't pull us away from our environment, but rather enhance
-                        it—turning classrooms into celestial maps, and blank walls into living canvas galleries.
-                    </p>
-                    <div class="skills-toolbelt">
-                        <h4>My Interactive Toolkit:</h4>
-                        <div class="toolbelt-grid">
-                            <div class="tool-item">
-                                <i class="fa-solid fa-cube"></i>
-                                <span>Blender (3D Modeling)</span>
-                            </div>
-                            <div class="tool-item">
-                                <i class="fa-solid fa-compass-drafting"></i>
-                                <span>Figma (Spatial UX)</span>
-                            </div>
-                            <div class="tool-item">
-                                <i class="fa-solid fa-code"></i>
-                                <span>HTML/CSS/JS (Code Prototypes)</span>
-                            </div>
-                            <div class="tool-item">
-                                <i class="fa-solid fa-pen-nib"></i>
-                                <span>Canva / Creative Suite</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ambition-pillars">
-                        <div class="pillar">
-                            <span class="pillar-icon"><i class="fa-solid fa-book-open"></i></span>
-                            <div class="pillar-desc">
-                                <strong>Interactive EdTech:</strong> AR environments where students can walk through
-                                historic ruins or manipulate 3D molecules.
-                            </div>
-                        </div>
-                        <div class="pillar">
-                            <span class="pillar-icon"><i class="fa-solid fa-wheelchair"></i></span>
-                            <div class="pillar-desc">
-                                <strong>Inclusive Design:</strong> Immersive experiences designed for accessibility,
-                                ensuring technology adapts to all bodies and minds.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section id="panel-analytics" class="content-panel">
+                <h2>Quantum Analytics Node</h2>
+                <p>Real-time graph metrics visualization frame.</p>
+            </section>
 
-                <!-- Interactive AR Simulator -->
-                <div class="ar-simulator-card glass-card">
-                    <div class="sim-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="sim-title"><i class="fa-solid fa-vr-cardboard"></i> AR Viewport Simulator</span>
-                    </div>
-                    <div class="sim-viewport" id="ar-viewport">
-                        <img src="assets/arvr_concept.png" alt="AR view of a solar system" class="sim-bg-image"
-                            id="sim-view-bg">
+            <section id="panel-alerts" class="content-panel">
+                <h2>Diagnostic Alerts History</h2>
+                <p>No critical failures detected across local sensors.</p>
+            </section>
 
-                        <!-- HUD Elements overlay -->
-                        <div class="hud-overlay" id="hud-overlay">
-                            <div class="hud-top">
-                                <span class="hud-battery"><i class="fa-solid fa-battery-three-quarters"></i> 82%</span>
-                                <span class="hud-tag" id="hud-mode-tag">MODE: SPACE EXPLORATION</span>
-                                <span class="hud-rec"><span class="rec-dot"></span> LIVE</span>
-                            </div>
+            <section id="panel-settings" class="content-panel">
+                <h2>Grid Monitor Properties</h2>
+                <p>Adjust system configurations and gravity matrices.</p>
+            </section>
 
-                            <div class="hud-center">
-                                <div class="reticle" id="reticle"></div>
-                                <div class="hologram-card" id="hologram-content">
-                                    <h5 id="holo-title">Solar System AR</h5>
-                                    <p id="holo-desc">Target: Saturn. Distance: 1.4B km. Click a simulator mode below to
-                                        explore other holograms.</p>
-                                </div>
-                            </div>
+        </main>
+    </div>
 
-                            <div class="hud-bottom">
-                                <span class="hud-coord">LAT: 12.9716° N | LON: 77.5946° E (Bengaluru)</span>
-                                <span class="hud-depth" id="hud-zoom">Zoom: 1.0x</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sim-controls">
-                        <span class="control-label">Select Hologram Mode:</span>
-                        <div class="btn-group">
-                            <button class="btn-sim active" id="sim-btn-space" data-mode="space">
-                                <i class="fa-solid fa-meteor"></i> Space
-                            </button>
-                            <button class="btn-sim" id="sim-btn-art" data-mode="art">
-                                <i class="fa-solid fa-paint-roller"></i> Art Studio
-                            </button>
-                            <button class="btn-sim" id="sim-btn-anatomy" data-mode="anatomy">
-                                <i class="fa-solid fa-heart-pulse"></i> Biology
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT & CONNECT SECTION -->
-        <section id="contact" class="section-container py-large">
-            <div class="section-header text-center">
-                <span class="section-tag">Let's Connect</span>
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Have a project idea, school collaboration, or design question? Drop a
-                    message!</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info glass-card">
-                    <h3>Reach Out Directly</h3>
-                    <p>
-                        I'm always excited to connect with other student creators, teachers, and design mentors who
-                        share my interests.
-                    </p>
-                    <div class="contact-details">
-                        <div class="detail-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <h5>Email</h5>
-                                <a href="mailto:stuti@student.nps.edu.in">stuti@student.nps.edu.in</a>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fa-solid fa-school"></i>
-                            <div>
-                                <h5>School Address</h5>
-                                <span>National Public School ITPL, Whitefield, Bengaluru, India</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="social-btn" aria-label="Figma"><i class="fa-brands fa-figma"></i></a>
-                        <a href="#" class="social-btn" aria-label="LinkedIn"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-
-                <div class="contact-form-card glass-card">
-                    <form id="contact-form">
-                        <div class="form-group-row">
-                            <div class="form-group">
-                                <label for="form-name">Your Name</label>
-                                <input type="text" id="form-name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="form-email">Your Email</label>
-                                <input type="email" id="form-email" placeholder="john@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-subject">Subject</label>
-                            <input type="text" id="form-subject" placeholder="Collaboration / Mentorship" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-message">Message</label>
-                            <textarea id="form-message" rows="5" placeholder="Write your message here..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
-                            <span>Send Message</span>
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
-                    <div id="form-feedback" class="form-feedback-message hidden" aria-live="polite"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer id="main-footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Stuti. Built with passion, HTML, CSS, and JS.</p>
-            <p>Designed as a stepping stone to the Royal College of Art, London.</p>
-            <a href="#hero" class="scroll-top-btn" aria-label="Scroll to top">
-                <i class="fa-solid fa-arrow-up"></i>
-            </a>
-        </div>
-    </footer>
-
-    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 
